@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/jonatan-98/InvitacionDe15-2-#readme",
   "devDependencies": {
-    "node-sass": "^8.0.0"
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
   }
 }

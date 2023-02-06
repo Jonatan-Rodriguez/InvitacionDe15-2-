@@ -1,3 +1,13 @@
-body{
-    background-color: aqua;
-}
+/* externos */
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway&display=swap'); */
+
+/* misc */
+@import './misc/variables.scss';
+@import './misc/normalize.scss';
+
+/* partials */
+@import './header.scss';
+@import './footer.scss';
+
+/* pages */
+@import './home.scss';
