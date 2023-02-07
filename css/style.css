@@ -1,5 +1,5 @@
-/* externos */
-/* @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Cardo&family=Roboto&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Playball&family=Roboto&display=swap");
 /* misc */
 /* colors */
 /* spacings */
@@ -11,7 +11,7 @@
   box-sizing: border-box; }
 
 html {
-  font-family: Raleway, sans-serif;
+  font-family: 'Cardo', serif;
   font-size: 62.5%;
   scroll-behavior: smooth; }
   html body {
@@ -26,18 +26,12 @@ html {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 6em;
-  width: 100%;
-  padding: 0 2em;
-  /* 
-    position:fixed;
-    z-index: 5; */
-  background: rgba(255, 255, 255, 0.01);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18); }
+  justify-content: center;
+  padding: 2em 2em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 5; }
   .header .burger {
     position: relative;
     width: 40px;
@@ -81,3 +75,31 @@ html {
     left: 5px; }
 
 /* pages */
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background: url(../asset/img/foto1.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover; }
+  .section-1__nombre h1 {
+    font-family: "Cardo", serif;
+    font-size: 9em;
+    color: white;
+    font-weight: lighter;
+    text-shadow: 2px 2px 2px #000; }
+  .section-1__sub h2 {
+    font-family: "Cardo", serif;
+    font-size: 1.8em;
+    color: white;
+    font-weight: lighter;
+    text-shadow: 2px 2px 2px #000; }
+  .section-1 #clock {
+    font-size: 5em;
+    color: white;
+    font-family: "Cardo", serif;
+    margin-top: 30px; }

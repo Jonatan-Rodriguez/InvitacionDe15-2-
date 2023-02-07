@@ -1,0 +1,37 @@
+.section-1{
+    width: 100%;
+    height: 100vh;
+    background: url(../asset/img/foto1.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+
+    &__nombre{
+        h1{
+            font-family: $font-primary;
+            font-size: $font-large;
+            color: $text-color;
+            font-weight: lighter;
+            text-shadow: 2px 2px 2px #000;
+        }
+    }
+    &__sub{
+        h2{
+            font-family: $font-primary;
+            font-size: $font-base;
+            color: $text-color;
+            font-weight: lighter;
+            text-shadow: 2px 2px 2px #000;
+        }
+    }
+    #clock{
+        font-size: $font-medium;
+        color: $text-color;
+        font-family: $font-primary;
+        margin-top: 30px;
+    }
+}
