@@ -21,7 +21,7 @@ const getRemainingTime = deadline => {
   
     const timerUpdate = setInterval( () => {
       let t = getRemainingTime(deadline);
-      el.innerHTML = `${t.remainDays}d:${t.remainHours}h:${t.remainMinutes}m:${t.remainSeconds}s`;
+      el.innerHTML = `${t.remainDays} : ${t.remainHours} : ${t.remainMinutes} : ${t.remainSeconds}`;
   
       if(t.remainTime <= 1) {
         clearInterval(timerUpdate);
@@ -31,4 +31,4 @@ const getRemainingTime = deadline => {
     }, 1000)
   };
   
-  countdown('Dec 31 2025 21:34:40 GMT-0500', 'clock', '¡Ya empezó!');
+  countdown('Mar 04 2023 21:00:00 GMT-0300', 'clock', '¡Feliz cumpleaños!');

@@ -27,10 +27,9 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2em 2em;
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 20px;
   z-index: 5; }
   .header .burger {
     position: relative;
@@ -75,10 +74,9 @@ html {
     left: 5px; }
 
 /* pages */
-.section-1 {
+section {
   width: 100%;
-  height: 100vh;
-  background: url(../asset/img/foto1.jpg);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,6 +84,18 @@ html {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover; }
+
+.titulo h3 {
+  font-size: 4.2em;
+  color: white;
+  font-family: "Cardo", serif;
+  text-align: center;
+  text-shadow: 2px 2px 2px #000;
+  font-weight: lighter;
+  margin: 3rem 0; }
+
+.section-1 {
+  background: url(../asset/img/foto1.jpg); }
   .section-1__nombre h1 {
     font-family: "Cardo", serif;
     font-size: 9em;
@@ -94,12 +104,83 @@ html {
     text-shadow: 2px 2px 2px #000; }
   .section-1__sub h2 {
     font-family: "Cardo", serif;
-    font-size: 1.8em;
+    font-size: 2.3em;
     color: white;
-    font-weight: lighter;
-    text-shadow: 2px 2px 2px #000; }
-  .section-1 #clock {
-    font-size: 5em;
-    color: white;
-    font-family: "Cardo", serif;
-    margin-top: 30px; }
+    font-weight: lighter; }
+  .section-1 .reloj {
+    position: absolute;
+    bottom: 50px; }
+    .section-1 .reloj #clock {
+      font-size: 4.2em;
+      color: white;
+      font-family: "Cardo", serif;
+      text-shadow: 2px 2px 2px #000; }
+    .section-1 .reloj .clock-info {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 5px; }
+      .section-1 .reloj .clock-info h3 {
+        font-size: 2.3em;
+        color: white;
+        font-family: "Cardo", serif;
+        font-weight: lighter; }
+
+.section-2 {
+  background: url(../asset/img/foto1.jpg); }
+  .section-2__contenedor {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px; }
+    .section-2__contenedor .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+      .section-2__contenedor .info .dir h3 {
+        font-size: 2.3em;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-weight: lighter;
+        line-height: 4rem; }
+      .section-2__contenedor .info .btn-box {
+        margin-top: 3rem; }
+        .section-2__contenedor .info .btn-box .btn {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          background-color: #7f7f7fd7;
+          width: 125px;
+          height: 40px;
+          border-radius: 50px;
+          /* 
+                    border: 0.5px solid white; */ }
+          .section-2__contenedor .info .btn-box .btn h4 {
+            font-size: 1.8em;
+            color: white;
+            font-weight: lighter; }
+          .section-2__contenedor .info .btn-box .btn .circulo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-size: 20px; }
+    .section-2__contenedor .img {
+      background-position: center center;
+      background-attachment: fixed;
+      background-size: cover;
+      margin-bottom: 3rem; }
+      .section-2__contenedor .img img {
+        border-radius: 15px; }
+
+.section-3 {
+  background: url(../asset/img/foto1.jpg); }
+  .section-3__contenedor {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px; }
