@@ -7,9 +7,7 @@ section{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-position: center center;
-	background-attachment: fixed;
-	background-size: cover;
+    padding: $spacing-base 0;
 } 
 
 //estilos de los titulos
@@ -21,18 +19,25 @@ section{
         text-align: center;
         text-shadow: 2px 2px 2px #000;
         font-weight: lighter;
-        margin: $spacing-base 0;
+        margin-bottom: $spacing-base;
     }
 }
 
 //Estilos del contenedor
 .contenedor{
-    
+    width: 85%;
+    max-width: 425px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
 }
 
 // ------------ seccion 1 ---------------
 .section-1{
-    background: url(../asset/img/foto1.jpg);
+    background: url(../asset/img/imgpri2.jpg);
+    background-position: center top;
+	background-attachment: fixed;
+	background-size: cover;
 
     &__nombre{
         h1{
@@ -81,11 +86,7 @@ section{
 .section-2{
     background: url(../asset/img/foto1.jpg);
 
-    &__contenedor{
-        width: 85%;
-        display: flex;
-        flex-direction: column;
-        row-gap: 50px;
+    .contenedor{
 
         .info{
             display: flex;
@@ -111,7 +112,7 @@ section{
                     display: flex;
                     justify-content: space-evenly;
                     align-items: center;
-                    background-color: #7f7f7fd7;
+                    background-color: $color-box;
                     width: 125px;
                     height: 40px;
                     border-radius: 50px;/* 
@@ -141,7 +142,6 @@ section{
 	        background-attachment: fixed;
 	        background-size: cover;
 
-            margin-bottom: $spacing-base;
             img{
                 border-radius: 15px;
             }
@@ -153,10 +153,52 @@ section{
 .section-3{
     background: url(../asset/img/foto1.jpg);
 
-    &__contenedor{
-        width: 85%;
-        display: flex;
-        flex-direction: column;
-        row-gap: 50px;
+    .contenedor{
+
+        .imagenes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 15px;
+
+            .foto{
+                width: 100%;
+
+                img{
+                    border-radius: 10px;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+// ------------ seccion 5 ---------------
+.section-5{
+
+    .contenedor{
+        .text{
+            h3{
+                font-size: $font-base;
+                color: $text-color;
+                font-family: $font-secondary;
+                font-weight: lighter;
+                line-height: $spacing-medium;
+            }
+        }
+        .box{
+            background-color: $color-box;
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            .text-app{
+                
+            }
+            .ico-app{
+
+            }
+        }
     }
 }
