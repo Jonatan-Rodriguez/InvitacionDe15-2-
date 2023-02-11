@@ -1,11 +1,12 @@
  /* colors */
  $color-primary:#264653;
- $color-box:#7f7f7fd7;/* 
- $color-tertiary:#E9C46A;
+ $color-box:#ffffff80;
+ $color-secondary:#202020;/* 
  $color-quarter:#E76F51; */
  $text-color:white;
 
 /* spacings */
+$spacing-large:6em;
 $spacing-medium:4rem;
 $spacing-base:3rem;
 $spacing-small:2rem;
@@ -18,5 +19,5 @@ $font-3:'Playball', cursive;
 /* font sizes */
 $font-large:9.0em;
 $font-medium:4.2em;
-$font-base:2.3em;
+$font-base:2.5em;
 $font-small:1.8em;

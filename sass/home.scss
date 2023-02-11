@@ -7,7 +7,7 @@ section{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: $spacing-base 0;
+    padding: $spacing-large 0;
 } 
 
 //estilos de los titulos
@@ -18,8 +18,21 @@ section{
         font-family: $font-primary;
         text-align: center;
         text-shadow: 2px 2px 2px #000;
+        font-weight: lighter;/* 
+        margin-bottom: $spacing-base; */
+    }
+}
+
+//Estilos de los textos
+.text{
+    h3{
+        font-size: $font-base;
+        color: $text-color;
+        font-family: $font-secondary;
         font-weight: lighter;
-        margin-bottom: $spacing-base;
+        line-height: $spacing-medium;
+        opacity: 0.8;
+        text-align: center;
     }
 }
 
@@ -28,6 +41,8 @@ section{
     width: 85%;
     max-width: 425px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     row-gap: 50px;
 }
@@ -87,56 +102,42 @@ section{
     background: url(../asset/img/foto1.jpg);
 
     .contenedor{
+        .text{
+            h3{
+                text-align: start;
+            }
+        }
+        .btn-box{
 
-        .info{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
+            //boton ubicacion
+            .btn {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                background-color: $color-box;
+                width: 125px;
+                height: 40px;
+                border-radius: 50px;
 
-            
-            .dir{
-                h3{
-                    font-size: $font-base;
+                h4{
+                    font-size: $font-small;
                     color: $text-color;
-                    font-family: $font-secondary;
                     font-weight: lighter;
-                    line-height: $spacing-medium;
+                }
+                .circulo{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: white;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                    font-size: 20px;
                 }
             }
-            .btn-box{
-                margin-top: $spacing-base;
-
-                //boton ubicacion
-                .btn {
-                    display: flex;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    background-color: $color-box;
-                    width: 125px;
-                    height: 40px;
-                    border-radius: 50px;/* 
-                    border: 0.5px solid white; */
-
-                    h4{
-                        font-size: $font-small;
-                        color: $text-color;
-                        font-weight: lighter;
-                    }
-                    .circulo{
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        background-color: white;
-                        width: 28px;
-                        height: 28px;
-                        border-radius: 50%;
-                        font-size: 20px;
-                    }
-                }
-            
-            }    
-        }
+        
+        }    
+    
         .img{
             background-position: center center;
 	        background-attachment: fixed;
@@ -175,29 +176,133 @@ section{
     }
 }
 
+// ------------ seccion 4 ---------------
+.section-4{
+    .contenedor{
+        .box{
+            background-color: $color-box;
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            padding: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            
+            .box__text{
+                span{
+                    font-size: $font-small;
+                    font-family: $font-secondary;
+                }
+            }
+            .copy{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+
+                .cbu{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    .cbu-input{
+                        width: 210px;
+                        height: 30px;
+                        font-size: 15px;
+                        border-radius: 20px;
+                        border: none;
+                        padding-left: 10px;
+                    }
+                    .btn-copy{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 70px;
+                        height: 30px;
+                        background-color: white;
+                        font-size: 20px;
+                        border-radius: 20px;
+                        cursor: pointer;
+                    }
+                }
+                .alias{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    .alias-input{
+                        width: 210px;
+                        height: 30px;
+                        font-size: 15px;
+                        border-radius: 20px;
+                        border: none;
+                        padding-left: 10px;
+                    }
+                    .btn-copy{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 70px;
+                        height: 30px;
+                        background-color: white;
+                        font-size: 20px;
+                        border-radius: 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // ------------ seccion 5 ---------------
 .section-5{
 
     .contenedor{
-        .text{
-            h3{
-                font-size: $font-base;
-                color: $text-color;
-                font-family: $font-secondary;
-                font-weight: lighter;
-                line-height: $spacing-medium;
-            }
-        }
         .box{
             background-color: $color-box;
             width: 100%;
-            height: 200px;
+            height: 180px;
             border-radius: 10px;
+            padding: 30px;
+
             .text-app{
-                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 2px solid $color-secondary;
+                span{
+                    font-size: $font-base;
+                    color: $color-secondary;
+                    font-family: $font-secondary;
+                    font-weight: lighter;
+                    line-height: $spacing-medium;
+                }
             }
             .ico-app{
+                height: 70%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 60px;
+                
+                a{
+                    color: $color-secondary;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
+                    span{
+                        height: 100%;
+                    }
+                }
             }
         }
     }
