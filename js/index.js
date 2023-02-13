@@ -32,3 +32,39 @@ const getRemainingTime = deadline => {
   };
   
   countdown('Mar 04 2023 21:00:00 GMT-0300', 'clock', '¡Feliz cumpleaños!');
+
+  //copy paste
+let inputCbu = document.getElementById(`inputCbu`);
+let btnCbu = document.getElementById(`btnCbu`);
+let inputAlias = document.getElementById(`inputAlias`);
+let btnAlias = document.getElementById(`btnAlias`); 
+let noti = document.getElementById(`noti`);/*
+let mensajeAlias = document.getElementById(`mensajeAlias`); */
+
+btnCbu.addEventListener(`click`, ()=>{
+    inputCbu.focus();
+    document.execCommand(`selectAll`);
+    document.execCommand(`copy`);
+    
+    setTimeout(()=>{
+        noti.classList.add(`noti-active`);
+    },1000);
+
+    setTimeout(()=>{
+      noti.classList.remove(`noti-active`);
+  },5000);
+})
+
+btnAlias.addEventListener(`click`, ()=>{
+    inputAlias.focus();
+    document.execCommand(`selectAll`);
+    document.execCommand(`copy`);
+    
+    setTimeout(()=>{
+      noti.classList.add(`noti-active`);
+    },1000);
+
+    setTimeout(()=>{
+      noti.classList.remove(`noti-active`);
+    },5000);
+})
