@@ -150,9 +150,9 @@ section {
 
 .section-2 {
   background: url(../asset/img/dondeCuando.jpg);
-  background-position: center top;
-  background-attachment: fixed;
-  background-size: cover; }
+  /* background-position: center top;
+	background-attachment: fixed;
+	background-size: cover; */ }
   .section-2 .contenedor .text h3 {
     text-align: start; }
   .section-2 .contenedor .btn-box .btn {
@@ -160,8 +160,8 @@ section {
     justify-content: space-evenly;
     align-items: center;
     background-color: #ffffff80;
-    width: 125px;
-    height: 40px;
+    width: 130px;
+    height: 45px;
     border-radius: 50px; }
     .section-2 .contenedor .btn-box .btn h4 {
       font-size: 1.8em;
@@ -238,7 +238,15 @@ section {
           border-radius: 20px;
           border: none;
           padding-left: 10px;
-          text-align: center; }
+          text-align: center;
+          outline: none;
+          pointer-events: none; }
+        .section-4 .contenedor .box .copy .cbu .cbu-input:focus {
+          outline: none; }
+        .section-4 .contenedor .box .copy .cbu .cbu-input::-moz-selection {
+          background-color: transparent; }
+        .section-4 .contenedor .box .copy .cbu .cbu-input::selection {
+          background-color: transparent; }
         .section-4 .contenedor .box .copy .cbu .btn-copy {
           display: flex;
           align-items: center;
@@ -269,7 +277,15 @@ section {
           border-radius: 20px;
           border: none;
           padding-left: 10px;
-          text-align: center; }
+          text-align: center;
+          outline: none;
+          pointer-events: none; }
+        .section-4 .contenedor .box .copy .alias .alias-input:focus {
+          outline: none; }
+        .section-4 .contenedor .box .copy .alias .alias-input::-moz-selection {
+          background-color: transparent; }
+        .section-4 .contenedor .box .copy .alias .alias-input::selection {
+          background-color: transparent; }
         .section-4 .contenedor .box .copy .alias .btn-copy {
           display: flex;
           align-items: center;
@@ -285,14 +301,35 @@ section {
   .section-4 .contenedor .noti {
     width: 100%;
     height: 1px;
-    background-color: green;
+    background-color: #52b788;
     position: fixed;
     bottom: 0;
-    box-shadow: 0 -10px 120px 90px green;
-    transform: translateY(300px); }
+    box-shadow: 0 0px 0px 0px #52b788;
+    transform: translateY(1px); }
   .section-4 .contenedor .noti-active {
-    transform: translateY(0);
-    transition: transform 1s; }
+    animation: 1.5s ease 0s infinite alternate noti-animation; }
+
+@keyframes noti-animation {
+  to {
+    box-shadow: 0 -10px 120px 90px #52b788; } }
+  .section-4 .contenedor .notificacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 40px;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    position: fixed;
+    bottom: -45px; }
+  .section-4 .contenedor .notificacion-active {
+    animation: 1.4s ease 0s infinite alternate notificacion-animation; }
+
+@keyframes notificacion-animation {
+  to {
+    bottom: 35px; } }
 
 .section-5 {
   background: url(../asset/img/asistencia.jpg); }

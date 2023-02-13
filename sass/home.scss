@@ -100,9 +100,9 @@ section{
 // ------------ seccion 2 ---------------
 .section-2{
     background: url(../asset/img/dondeCuando.jpg);
-    background-position: center top;
+    /* background-position: center top;
 	background-attachment: fixed;
-	background-size: cover;
+	background-size: cover; */
     
     .contenedor{
         .text{
@@ -118,8 +118,8 @@ section{
                 justify-content: space-evenly;
                 align-items: center;
                 background-color: $color-box;
-                width: 125px;
-                height: 40px;
+                width: 130px;
+                height: 45px;
                 border-radius: 50px;
 
                 h4{
@@ -232,6 +232,17 @@ section{
                         border: none;
                         padding-left: 10px;
                         text-align: center;
+                        outline: none;
+	                    pointer-events: none;
+                    }
+                    .cbu-input:focus{
+                        outline: none;
+                    }
+                    .cbu-input::-moz-selection{
+                        background-color: transparent;
+                    }
+                    .cbu-input::selection{
+                        background-color: transparent;
                     }
                     .btn-copy{
                         display: flex;
@@ -270,6 +281,17 @@ section{
                         border: none;
                         padding-left: 10px;
                         text-align: center;
+                        outline: none;
+	                    pointer-events: none;
+                    }
+                    .alias-input:focus{
+                        outline: none;
+                    }
+                    .alias-input::-moz-selection{
+                        background-color: transparent;
+                    }
+                    .alias-input::selection{
+                        background-color: transparent;
                     }
                     .btn-copy{
                         display: flex;
@@ -290,15 +312,40 @@ section{
         .noti{
             width: 100%;
             height: 1px;
-            background-color: green;
+            background-color: #52b788;
             position: fixed;
             bottom: 0;
-            box-shadow: 0 -10px 120px 90px green;
-            transform: translateY(300px);
+            box-shadow: 0 0px 0px 0px #52b788;
+            transform: translateY(1px);
         }
         .noti-active{
-            transform: translateY(0);
-            transition: transform 1s;
+            animation: 1.5s ease 0s infinite alternate noti-animation;
+        }
+        @keyframes noti-animation {
+            to {
+              box-shadow: 0 -10px 120px 90px #52b788;
+            }
+        }
+        .notificacion{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 180px;
+            height: 40px;
+            background-color: white;
+            font-size: 20px;
+            border-radius: 20px;
+            font-family: $font-secondary;
+            position: fixed;
+            bottom: -45px;
+        }
+        .notificacion-active{
+            animation: 1.4s ease 0s infinite alternate notificacion-animation;
+        }
+        @keyframes notificacion-animation {
+            to {
+                bottom: 35px;
+            }
         }
     }
 }

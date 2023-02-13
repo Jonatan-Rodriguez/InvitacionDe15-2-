@@ -38,8 +38,8 @@ let inputCbu = document.getElementById(`inputCbu`);
 let btnCbu = document.getElementById(`btnCbu`);
 let inputAlias = document.getElementById(`inputAlias`);
 let btnAlias = document.getElementById(`btnAlias`); 
-let noti = document.getElementById(`noti`);/*
-let mensajeAlias = document.getElementById(`mensajeAlias`); */
+let noti = document.getElementById(`noti`);
+let notificacion = document.getElementById(`notificacion`);
 
 btnCbu.addEventListener(`click`, ()=>{
     inputCbu.focus();
@@ -48,11 +48,13 @@ btnCbu.addEventListener(`click`, ()=>{
     
     setTimeout(()=>{
         noti.classList.add(`noti-active`);
+        notificacion.classList.add(`notificacion-active`);
     },1000);
 
     setTimeout(()=>{
       noti.classList.remove(`noti-active`);
-  },5000);
+      notificacion.classList.remove(`notificacion-active`);
+  },3900);
 })
 
 btnAlias.addEventListener(`click`, ()=>{
@@ -62,9 +64,32 @@ btnAlias.addEventListener(`click`, ()=>{
     
     setTimeout(()=>{
       noti.classList.add(`noti-active`);
+      notificacion.classList.add(`notificacion-active`);
     },1000);
 
     setTimeout(()=>{
       noti.classList.remove(`noti-active`);
-    },5000);
+      notificacion.classList.remove(`notificacion-active`);
+    },3900);
 })
+
+//Observer
+let section2 = document.getElementById(`section2`);
+let section3 = document.getElementById(`section3`);
+let section4 = document.getElementById(`section4`);
+let section5 = document.getElementById(`section5`);
+
+const cargarClase = ()=> {
+  /* console.log("ejecuta"); */
+}
+
+const observador = new IntersectionObserver(cargarClase, {
+	root: null,
+  rootMargin: '0px 0px',
+	threshold: 0.8
+});
+
+observador.observe(section2);
+observador.observe(section3);
+observador.observe(section4);
+observador.observe(section5);
