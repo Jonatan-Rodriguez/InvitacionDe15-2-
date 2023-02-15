@@ -122,6 +122,32 @@ section {
         color: white;
         font-family: "Cardo", serif;
         font-weight: lighter; }
+  .section-1 .chevrons {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 10px; }
+  .section-1 .chevrondown {
+    margin-top: -6px;
+    position: relative;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg); }
+  .section-1 .chevrondown:nth-child(odd) {
+    animation: pulse54012 1000ms ease infinite alternate; }
+  .section-1 .chevrondown:nth-child(even) {
+    animation: pulse54012 1000ms ease infinite alternate 150ms; }
+
+@keyframes pulse54012 {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.5; } }
 
 .section-2 {
   background: url(../asset/img/dondeCuando.jpg); }
