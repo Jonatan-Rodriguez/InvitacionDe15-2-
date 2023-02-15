@@ -55,7 +55,7 @@ btnCbu.addEventListener(`click`, ()=>{
       noti.classList.remove(`noti-active`);
       notificacion.classList.remove(`notificacion-active`);
   },3900);
-})
+});
 
 btnAlias.addEventListener(`click`, ()=>{
     inputAlias.focus();
@@ -71,7 +71,17 @@ btnAlias.addEventListener(`click`, ()=>{
       noti.classList.remove(`noti-active`);
       notificacion.classList.remove(`notificacion-active`);
     },3900);
-})
+});
+
+// Reproductor de musica
+let music = document.getElementById(`my_audio`);
+const playpause = document.querySelector('.playpause');
+
+playpause.addEventListener('click', () => {
+  playpause.classList.toggle('playing');
+
+  music.paused? music.play(): music.pause();
+});
 
 //Observer
 let section2 = document.getElementById(`section2`);

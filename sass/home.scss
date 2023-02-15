@@ -47,6 +47,31 @@ section{
     row-gap: 50px;
 }
 
+//Estilos del reproductor
+.playpause {
+	padding: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+	position: fixed;
+	bottom: 16px;
+	right:8px;
+	display: block;
+	background: #52b788;
+}
+  
+.playpause .button {
+	width: 15px;
+	height: 15px;
+	background: #f0f0f0;
+	transition: inherit;
+	clip-path: polygon(0 0, 50% 25%, 50% 75%, 50% 75%, 50% 25%, 100% 50%, 100% 50%, 0 100%);
+}
+  
+.playpause.playing .button {
+	clip-path: polygon(0 0, 40% 0, 40% 100%, 60% 100%, 60% 0, 100% 0, 100% 100%, 0 100%);
+}
+
 // ------------ seccion 1 ---------------
 .section-1{
     background: url(../asset/img/imgPrin.jpg);
@@ -100,9 +125,6 @@ section{
 // ------------ seccion 2 ---------------
 .section-2{
     background: url(../asset/img/dondeCuando.jpg);
-    /* background-position: center top;
-	background-attachment: fixed;
-	background-size: cover; */
     
     .contenedor{
         .text{
@@ -156,6 +178,9 @@ section{
 // ------------ seccion 3 ---------------
 .section-3{
     background: url(../asset/img/galeriaFotos.jpg);
+    background-position: center top;
+	background-attachment: fixed;
+	background-size: cover;
 
     .contenedor{
 

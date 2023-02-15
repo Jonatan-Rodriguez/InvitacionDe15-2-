@@ -25,56 +25,75 @@ html {
     width: 100%; }
 
 /* partials */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 5; }
-  .header .burger {
-    position: relative;
-    width: 40px;
-    height: 30px;
-    background: transparent;
-    cursor: pointer; }
-  .header .burger input {
-    display: none; }
-  .header .burger span {
-    display: block;
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background: white;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out; }
-  .header .burger span:nth-of-type(1) {
-    top: 0px;
-    transform-origin: left center; }
-  .header .burger span:nth-of-type(2) {
-    top: 50%;
-    transform: translateY(-50%);
-    transform-origin: left center; }
-  .header .burger span:nth-of-type(3) {
-    top: 100%;
-    transform-origin: left center;
-    transform: translateY(-100%); }
-  .header .burger input:checked ~ span:nth-of-type(1) {
-    transform: rotate(45deg);
-    top: 0px;
-    left: 5px; }
-  .header .burger input:checked ~ span:nth-of-type(2) {
-    width: 0%;
-    opacity: 0; }
-  .header .burger input:checked ~ span:nth-of-type(3) {
-    transform: rotate(-45deg);
-    top: 28px;
-    left: 5px; }
-
+/* .header{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    position:fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    
+    //Menu hamburguesa
+    .burger {
+        position: relative;
+        width: 40px;
+        height: 30px;
+        background: transparent;
+        cursor: pointer;
+      }
+      
+      .burger input {
+        display: none;
+      }
+      
+      .burger span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: white;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+      }
+      
+      .burger span:nth-of-type(1) {
+        top: 0px;
+        transform-origin: left center;
+      }
+      
+      .burger span:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: left center;
+      }
+      
+      .burger span:nth-of-type(3) {
+        top: 100%;
+        transform-origin: left center;
+        transform: translateY(-100%);
+      }
+      
+      .burger input:checked ~ span:nth-of-type(1) {
+        transform: rotate(45deg);
+        top: 0px;
+        left: 5px;
+      }
+      
+      .burger input:checked ~ span:nth-of-type(2) {
+        width: 0%;
+        opacity: 0;
+      }
+      
+      .burger input:checked ~ span:nth-of-type(3) {
+        transform: rotate(-45deg);
+        top: 28px;
+        left: 5px;
+      }
+} */
 /* pages */
 section {
   width: 100%;
@@ -113,6 +132,27 @@ section {
   flex-direction: column;
   row-gap: 50px; }
 
+.playpause {
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  position: fixed;
+  bottom: 16px;
+  right: 8px;
+  display: block;
+  background: #52b788; }
+
+.playpause .button {
+  width: 15px;
+  height: 15px;
+  background: #f0f0f0;
+  transition: inherit;
+  clip-path: polygon(0 0, 50% 25%, 50% 75%, 50% 75%, 50% 25%, 100% 50%, 100% 50%, 0 100%); }
+
+.playpause.playing .button {
+  clip-path: polygon(0 0, 40% 0, 40% 100%, 60% 100%, 60% 0, 100% 0, 100% 100%, 0 100%); }
+
 .section-1 {
   background: url(../asset/img/imgPrin.jpg);
   background-position: center top;
@@ -149,10 +189,7 @@ section {
         font-weight: lighter; }
 
 .section-2 {
-  background: url(../asset/img/dondeCuando.jpg);
-  /* background-position: center top;
-	background-attachment: fixed;
-	background-size: cover; */ }
+  background: url(../asset/img/dondeCuando.jpg); }
   .section-2 .contenedor .text h3 {
     text-align: start; }
   .section-2 .contenedor .btn-box .btn {
@@ -184,7 +221,10 @@ section {
       border-radius: 15px; }
 
 .section-3 {
-  background: url(../asset/img/galeriaFotos.jpg); }
+  background: url(../asset/img/galeriaFotos.jpg);
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover; }
   .section-3 .contenedor .imagenes {
     display: flex;
     justify-content: center;
