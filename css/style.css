@@ -1,9 +1,6 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Cardo&family=Roboto&display=swap'); */
-@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Playball&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Roboto&display=swap");
 /* misc */
 /* colors */
-/* 
- $color-quarter:#E76F51; */
 /* spacings */
 /* font fasmily */
 /* font sizes */
@@ -25,75 +22,6 @@ html {
     width: 100%; }
 
 /* partials */
-/* .header{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    position:fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 5;
-    
-    //Menu hamburguesa
-    .burger {
-        position: relative;
-        width: 40px;
-        height: 30px;
-        background: transparent;
-        cursor: pointer;
-      }
-      
-      .burger input {
-        display: none;
-      }
-      
-      .burger span {
-        display: block;
-        position: absolute;
-        height: 4px;
-        width: 100%;
-        background: white;
-        border-radius: 9px;
-        opacity: 1;
-        left: 0;
-        transform: rotate(0deg);
-        transition: .25s ease-in-out;
-      }
-      
-      .burger span:nth-of-type(1) {
-        top: 0px;
-        transform-origin: left center;
-      }
-      
-      .burger span:nth-of-type(2) {
-        top: 50%;
-        transform: translateY(-50%);
-        transform-origin: left center;
-      }
-      
-      .burger span:nth-of-type(3) {
-        top: 100%;
-        transform-origin: left center;
-        transform: translateY(-100%);
-      }
-      
-      .burger input:checked ~ span:nth-of-type(1) {
-        transform: rotate(45deg);
-        top: 0px;
-        left: 5px;
-      }
-      
-      .burger input:checked ~ span:nth-of-type(2) {
-        width: 0%;
-        opacity: 0;
-      }
-      
-      .burger input:checked ~ span:nth-of-type(3) {
-        transform: rotate(-45deg);
-        top: 28px;
-        left: 5px;
-      }
-} */
 /* pages */
 section {
   width: 100%;
@@ -111,9 +39,7 @@ section {
   font-family: "Cardo", serif;
   text-align: center;
   text-shadow: 2px 2px 2px #000;
-  font-weight: lighter;
-  /* 
-        margin-bottom: $spacing-base; */ }
+  font-weight: lighter; }
 
 .text h3 {
   font-size: 2.5em;
@@ -142,7 +68,8 @@ section {
   bottom: 16px;
   right: 8px;
   display: block;
-  background: #52b788; }
+  background: #52b788;
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.8); }
 
 .playpause .button {
   width: 15px;
@@ -153,6 +80,13 @@ section {
 
 .playpause.playing .button {
   clip-path: polygon(0 0, 40% 0, 40% 100%, 60% 100%, 60% 0, 100% 0, 100% 100%, 0 100%); }
+
+.btn-active {
+  animation: 0.5s ease 0s infinite alternate btn-animation; }
+
+@keyframes btn-animation {
+  to {
+    background-color: #52b788; } }
 
 .section-1 {
   background: url(../asset/img/imgPrin.jpg);
@@ -200,7 +134,8 @@ section {
     background-color: #ffffff80;
     width: 130px;
     height: 45px;
-    border-radius: 50px; }
+    border-radius: 50px;
+    box-shadow: 5px 6px 5px 4px rgba(0, 0, 0, 0.5); }
     .section-2 .contenedor .btn-box .btn h4 {
       font-size: 1.8em;
       color: white;
@@ -237,7 +172,8 @@ section {
       .section-3 .contenedor .imagenes .foto img {
         border-radius: 10px;
         height: 100%;
-        object-fit: cover; }
+        object-fit: cover;
+        box-shadow: 8px 7px 5px 3px rgba(0, 0, 0, 0.8); }
 
 .section-4 {
   background: url(../asset/img/regalos.jpg); }
@@ -346,7 +282,8 @@ section {
     position: fixed;
     bottom: 0;
     box-shadow: 0 0px 0px 0px #52b788;
-    transform: translateY(1px); }
+    transform: translateY(1px);
+    z-index: 2; }
   .section-4 .contenedor .noti-active {
     animation: 1.5s ease 0s infinite alternate noti-animation; }
 
@@ -364,7 +301,8 @@ section {
     border-radius: 20px;
     font-family: "Roboto", sans-serif;
     position: fixed;
-    bottom: -45px; }
+    bottom: -45px;
+    z-index: 3; }
   .section-4 .contenedor .notificacion-active {
     animation: 1.4s ease 0s infinite alternate notificacion-animation; }
 

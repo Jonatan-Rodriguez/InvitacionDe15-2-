@@ -49,12 +49,12 @@ btnCbu.addEventListener(`click`, ()=>{
     setTimeout(()=>{
         noti.classList.add(`noti-active`);
         notificacion.classList.add(`notificacion-active`);
-    },1000);
+    },500);
 
     setTimeout(()=>{
       noti.classList.remove(`noti-active`);
       notificacion.classList.remove(`notificacion-active`);
-  },3900);
+  },3400);
 });
 
 btnAlias.addEventListener(`click`, ()=>{
@@ -65,12 +65,12 @@ btnAlias.addEventListener(`click`, ()=>{
     setTimeout(()=>{
       noti.classList.add(`noti-active`);
       notificacion.classList.add(`notificacion-active`);
-    },1000);
+    },500);
 
     setTimeout(()=>{
       noti.classList.remove(`noti-active`);
       notificacion.classList.remove(`notificacion-active`);
-    },3900);
+    },3400);
 });
 
 // Reproductor de musica
@@ -83,23 +83,13 @@ playpause.addEventListener('click', () => {
   music.paused? music.play(): music.pause();
 });
 
-//Observer
-let section2 = document.getElementById(`section2`);
-let section3 = document.getElementById(`section3`);
-let section4 = document.getElementById(`section4`);
-let section5 = document.getElementById(`section5`);
+//animacion de cambio de background
+let btnUbi = document.getElementById(`btnUbi`);
 
-const cargarClase = ()=> {
-  /* console.log("ejecuta"); */
-}
+btnUbi.addEventListener('click', ()=>{
+  btnUbi.classList.add('btn-active');
 
-const observador = new IntersectionObserver(cargarClase, {
-	root: null,
-  rootMargin: '0px 0px',
-	threshold: 0.8
+  setTimeout(()=>{
+    btnUbi.classList.remove(`btn-active`);
+  },1000);
 });
-
-observador.observe(section2);
-observador.observe(section3);
-observador.observe(section4);
-observador.observe(section5);
