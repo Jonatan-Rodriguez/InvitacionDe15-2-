@@ -343,29 +343,60 @@ section {
     width: 100%;
     height: 180px;
     border-radius: 10px;
-    padding: 30px; }
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 10px;
+    /* .ico-app{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 60px;
+                width: 100px;
+                height: 100px;
+                background-color: #f0f0f0;
+                border-radius: 50%;
+                
+                a{
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    span{
+                        height: 100%;
+                    }
+                }
+            } */ }
     .section-5 .contenedor .box .text-app {
       display: flex;
       justify-content: center;
       align-items: center;
-      border-bottom: 2px solid #202020; }
+      border-bottom: 2px solid #202020;
+      width: 100%; }
       .section-5 .contenedor .box .text-app span {
         font-size: 2.5em;
         color: #202020;
         font-family: "Roboto", sans-serif;
         font-weight: lighter;
         line-height: 4rem; }
-    .section-5 .contenedor .box .ico-app {
-      height: 70%;
+    .section-5 .contenedor .box .btn-confirmar {
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
-      font-size: 60px; }
-      .section-5 .contenedor .box .ico-app a {
-        color: #202020;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        .section-5 .contenedor .box .ico-app a span {
-          height: 100%; }
+      border: none;
+      padding: 5px;
+      position: relative;
+      width: 170px;
+      height: 55px;
+      font-size: 20px;
+      border-radius: 50px;
+      background-color: #25D366;
+      box-shadow: 5px 4px 8px 3px rgba(0, 0, 0, 0.4); }
+    .section-5 .contenedor .box span {
+      color: #fff;
+      font-family: "Roboto", sans-serif; }
+    .section-5 .contenedor .box svg {
+      fill: #fff; }
