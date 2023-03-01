@@ -9,7 +9,16 @@ section{
     align-items: center;
     flex-direction: column;
     padding: $spacing-large 0;
-} 
+}
+
+.section-1{
+    /* transform: scale(2);
+    transition: 5s ease-in-out all; */
+}
+.section-animation{
+    /* transform: scale(1); */
+    
+}
 
 //estilos de los titulos
 .titulo{
@@ -86,11 +95,22 @@ section{
 
 // ------------ seccion 1 ---------------
 .section-1{
-    background: url(../asset/img/imgPrin.jpg);
+    /* background: url(../asset/img/imgPrin.jpg);
     background-position: center top;
 	background-attachment: fixed;
-	background-size: cover;
+	background-size: cover; */
 
+    img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: top center;
+        z-index: -1;
+        
+    }
     &__nombre{
         h1{
             font-family: $font-primary;
@@ -110,7 +130,7 @@ section{
     }
     .reloj{
         position: absolute;
-        bottom: 50px;
+        bottom: 60px;
         #clock{
             font-size: $font-medium;
             color: $text-color;

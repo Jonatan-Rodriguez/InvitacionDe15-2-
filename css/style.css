@@ -33,6 +33,13 @@ section {
   flex-direction: column;
   padding: 6em 0; }
 
+.section-1 {
+  /* transform: scale(2);
+    transition: 5s ease-in-out all; */ }
+
+.section-animation {
+  /* transform: scale(1); */ }
+
 .titulo h3 {
   font-size: 4.2em;
   color: white;
@@ -89,10 +96,19 @@ section {
     background-color: #52b788; } }
 
 .section-1 {
-  background: url(../asset/img/imgPrin.jpg);
-  background-position: center top;
-  background-attachment: fixed;
-  background-size: cover; }
+  /* background: url(../asset/img/imgPrin.jpg);
+    background-position: center top;
+	background-attachment: fixed;
+	background-size: cover; */ }
+  .section-1 img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: top center;
+    z-index: -1; }
   .section-1__nombre h1 {
     font-family: "Cardo", serif;
     font-size: 9em;
@@ -106,7 +122,7 @@ section {
     font-weight: lighter; }
   .section-1 .reloj {
     position: absolute;
-    bottom: 50px; }
+    bottom: 60px; }
     .section-1 .reloj #clock {
       font-size: 4.2em;
       color: white;
@@ -348,28 +364,7 @@ section {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    row-gap: 10px;
-    /* .ico-app{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 60px;
-                width: 100px;
-                height: 100px;
-                background-color: #f0f0f0;
-                border-radius: 50%;
-                
-                a{
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    span{
-                        height: 100%;
-                    }
-                }
-            } */ }
+    row-gap: 10px; }
     .section-5 .contenedor .box .text-app {
       display: flex;
       justify-content: center;

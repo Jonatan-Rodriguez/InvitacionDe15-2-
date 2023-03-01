@@ -93,3 +93,26 @@ btnUbi.addEventListener('click', ()=>{
     btnUbi.classList.remove(`btn-active`);
   },1000);
 });
+
+//observer
+let section1 = document.getElementById(`section1`);
+
+const animacion = (entradas, observador) => {
+ 
+  entradas.forEach((entrada) => {
+
+    if(entrada.isIntersecting){
+      entrada.target.classList.add('section-animation');
+    } else {
+      entrada.target.classList.remove('section-animation');
+    }
+  });
+};
+
+const observador = new IntersectionObserver(animacion, {
+  root: null ,
+  rootMargin : '0px 0px 0px 0px',
+  threshold: '1.0'
+});
+
+observador.observe(section1);
