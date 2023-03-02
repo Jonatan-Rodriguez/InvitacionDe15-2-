@@ -101,14 +101,32 @@ section {
 	background-attachment: fixed;
 	background-size: cover; */ }
   .section-1 img {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     object-fit: cover;
     object-position: top center;
-    z-index: -1; }
+    z-index: -1;
+    filter: brightness(0.8); }
+  .section-1 .img-1 {
+    animation-name: animationPri;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; }
+
+@keyframes animationPri {
+  0% {
+    transform: scale(1.2); }
+  25% {
+    transform: scale(1.1); }
+  50% {
+    transform: scale(1); }
+  75% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1.2); } }
   .section-1__nombre h1 {
     font-family: "Cardo", serif;
     font-size: 9em;
