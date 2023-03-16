@@ -246,7 +246,7 @@ section{
             width:90%;
             max-width: 120em;
             padding:2em;
-            overflow: hidden;
+            overflow:hidden;
         }
         .carrousel .grande{
             width: 200%;
@@ -278,6 +278,7 @@ section{
             margin: 1em 1em 0;
             background-color: #f0f0f0;
             border-radius: 50px;
+            list-style: none;
         }
         .carrousel .punto.activo{
             background-color: $color-tertiary;
@@ -293,23 +294,53 @@ section{
 	background-size: cover;
 
     .contenedor{
+        .container-slider{
+            width: 100%;
+            max-width: 900px;
+            overflow: hidden;
+            position: relative;
 
-        .imagenes{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            row-gap: 15px;
+            .slider{
+                display: flex;
+                flex-direction: row;
+                width: 400%;
+                height: 400px;
+                margin-left: -100%;
 
-            .foto{
-                width: 100%;
-
-                img{
-                    border-radius: 10px;
-                    height: 100%;
-                    object-fit: cover;
-                    box-shadow: 8px 7px 5px 3px rgba(0, 0, 0, 0.8);
+                .slider__section{
+                    width: 100%;
+                    .slider__img{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 40px;
+                    }
                 }
+            }
+
+            .slider__btn{
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                background-color: rgba(255,255,255,0.7);
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 30px;
+                font-weight: bold;
+                font-family: monospace;
+                text-align: center;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            .slider__btn:hover{
+                background-color: #fff;
+            }
+            .slider__btn--left{
+                left: 10px;
+            }
+            .slider__btn--right{
+                right: 10px;
             }
         }
     }
