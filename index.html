@@ -7,29 +7,32 @@
     <link rel="shortcut icon" href="./asset/img/flor.ico" type="image/x-icon">
     <meta name="description" content="Invitacion Web de mi cumpleaños de 15">
     <meta name="keywords" content="Invitacion Web, cumpleaños de 15, mis 15 años, invitacion de 15">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Mis 15 años</title>
 </head>
 <body>
     <header>
     </header>
-    <main class="main">
-        <section class="section-1" id="section1">
-            <img class="img-1" src="./asset/img/imgPrin.jpg" alt="img personal">
-            <div class="section-1__nombre"><h1>Brisa</h1></div>
-            <div class="section-1__sub"><h2>Mi cumple de 15</h2></div>
-            <div class="reloj">
-                <div id="clock"></div>
-                <div class="clock-info"><h3>Dias</h3><h3>Hs</h3><h3>Min</h3><h3>Seg</h3></div>
-            </div>
-            <a href="#section2">
-                <div class="chevrons">
-                    <div class="chevrondown"></div>
-                    <div class="chevrondown"></div>
+    <main class="main" id="fullpage">
+        <section class="section-1 seccion section" id="section1">
+            <div class="contenedor">
+                <img class="img-1" src="./asset/img/imgPrin.jpg" alt="img personal">
+                <div class="section-1__nombre"><h1>Brisa</h1></div>
+                <div class="section-1__sub"><h2>Mi cumple de 15</h2></div>
+                <div class="reloj">
+                    <div id="clock"></div>
+                    <div class="clock-info"><h3>Dias</h3><h3>Hs</h3><h3>Min</h3><h3>Seg</h3></div>
                 </div>
-            </a>
+                <a href="#section2">
+                    <div class="chevrons">
+                        <div class="chevrondown"></div>
+                        <div class="chevrondown"></div>
+                    </div>
+                </a>
+            </div>
         </section>
-        <section id="section2" class="section-2">
+        <section id="section2" class="section-2 seccion section">
             <div class="contenedor">
                 <div class="titulo">
                     <h3>¿Dónde y cuándo?</h3>
@@ -56,7 +59,7 @@
                 </div>
             </div>
         </section>
-        <section id="section3" class="section-3">
+        <section id="section3" class="section-3 seccion section">
             <div class="contenedor">
                 <div class="titulo">
                     <h3>Galeria de fotos</h3>
@@ -81,7 +84,7 @@
                 </div>
             </div>
         </section>
-        <section id="section4" class="section-4">
+        <section id="section4" class="section-4 seccion section">
             <div class="contenedor">
                 <div class="titulo">
                     <h3>Regalo</h3>
@@ -110,12 +113,12 @@
                         </div>
                     </div>
                 </div>
-                <div id="noti" class="noti"></div>
+                <!-- <div id="noti" class="noti"></div>
                 <div id="notificacion" class="notificacion"> <span>¡Copiado!</span></div>
-                
+                 -->
             </div>
         </section>
-        <section id="section5" class="section-5">
+        <section id="section5" class="section-5 seccion section">
             <div class="contenedor">
                 <div class="titulo">
                     <h3>Confirmar asistencia</h3>
@@ -136,14 +139,15 @@
                 </div>
             </div>
         </section>
-        <div class="playpause">
+       <!--  <div class="playpause">
             <div class="button"></div>
          </div>
-         <audio src="./asset/music/James Blunt - You're Beautiful.mp3" id="my_audio" loop="loop"></audio>
+         <audio src="./asset/music/James Blunt - You're Beautiful.mp3" id="my_audio" loop="loop"></audio> -->
     </main>
     <footer class="footer">
 
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <script src="./js/index.js"></script>
 </body>

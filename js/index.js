@@ -1,3 +1,7 @@
+const seccionesPaginas = new fullpage('#fullpage',{
+  
+});
+
 //Cuenta regresiva
 const getRemainingTime = deadline => {
     let now = new Date(),
@@ -74,17 +78,17 @@ btnAlias.addEventListener(`click`, ()=>{
 });
 
 // Reproductor de musica
-let music = document.getElementById(`my_audio`);
+/* let music = document.getElementById(`my_audio`);
 const playpause = document.querySelector('.playpause');
 
 playpause.addEventListener('click', () => {
   playpause.classList.toggle('playing');
 
   music.paused? music.play(): music.pause();
-});
+}); */
 
 //animacion de cambio de background
-let btnUbi = document.getElementById(`btnUbi`);
+/* let btnUbi = document.getElementById(`btnUbi`);
 
 btnUbi.addEventListener('click', ()=>{
   btnUbi.classList.add('btn-active');
@@ -92,7 +96,7 @@ btnUbi.addEventListener('click', ()=>{
   setTimeout(()=>{
     btnUbi.classList.remove(`btn-active`);
   },1000);
-});
+}); */
 
 //observer
 /* let section1 = document.getElementById(`section1`);
